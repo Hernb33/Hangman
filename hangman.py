@@ -1,7 +1,7 @@
 import random
 from hangman_words import word_list
 from hangman_art import stages, logo
-# TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
+# TODO-1: - Use the 'word_list' from hangman_words.py
 
 lives = 6
 
@@ -20,7 +20,7 @@ correct_letters = []
 
 while not game_over:
 
-    # TODO-6: - Update the code below to tell the user how many lives they have left.
+    # TODO-6: - Tell the user how many lives they have left.
     print(f"****************************{lives}/6 LIVES LEFT****************************")
     guess = input("Guess a letter: ").lower()
 
@@ -50,12 +50,12 @@ while not game_over:
         if lives == 0:
             game_over = True
 
-            # TODO 7: - Update the print statement below to give the user the correct word they were trying to guess.
+            # TODO 7: - Print statement below to give the user the correct word they were trying to guess.
             print(f"***********************IT WAS {chosen_word}! YOU LOSE**********************")
 
     if "_" not in display:
         game_over = True
         print("****************************YOU WIN****************************")
 
-    # TODO-2: - Update the code below to use the stages List from the file hangman_art.py
+    # TODO-2: - Use the stages List from the file hangman_art.py
     print(stages[lives])
